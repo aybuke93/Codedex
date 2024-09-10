@@ -1,0 +1,47 @@
+# create variables as player and computer
+
+computer = 0
+player =0
+
+import random
+print ('=====================')
+print (' Rock Paper Scissor')
+print ('=====================')
+print ('1) ✊')
+print ('2) ✋')
+print ('3) ✌️')
+
+mesaj1 = 'The computer won!'
+mesaj2 = 'The player won!'
+
+while player== computer:
+  computer =random. randint (1,3)
+  player= int (input ('Pick a number: '))
+  if player ==1 and computer ==2:
+    print ('You chose: ✊')
+    print ('CPU chose: ✋')
+    print (mesaj1)
+  elif player ==1 and computer ==3:
+    print ('You chose: ✊')
+    print ('CPU chose: ✌️')
+    print (mesaj2)
+  elif player ==2 and computer ==3:
+    print ('You chose: ✋')
+    print ('CPU chose: ✌️')
+    print (mesaj1)
+  elif player ==2 and computer ==1:
+    print ('You chose: ✋')
+    print ('CPU chose: ✊')
+    print (mesaj2)
+  elif player ==3 and computer ==1:
+    print ('You chose: ✌️')
+    print ('CPU chose: ✊')
+    print (mesaj1)
+  elif player ==3 and computer ==2:
+    print ('You chose: ✌️')
+    print ('CPU chose: ✋')
+    print (mesaj2)
+  else:
+    print (f'Computer is {computer}')
+    print (f'Player is {player}')
+    print ('Equal, try again!')
