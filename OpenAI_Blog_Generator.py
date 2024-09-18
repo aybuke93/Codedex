@@ -1,4 +1,3 @@
-#visit link: https://www.codedex.io/projects/generate-a-blog-with-openai
 import openai
 ## We installed python-dotenv to hide our KEY. python-dotenv is a package that allows us to create and
 ## use environment variables without having to set them in the operating system manually.
@@ -17,8 +16,13 @@ def generate_blog(paragraph_topic):
   response = openai.completions.create(
     model = 'gpt-3.5-turbo-instruct',
     prompt = 'Write a paragraph about the following topic. ' + paragraph_topic,
+    #IMPORTANT: This is the part where you tell AI what to do!! You can change it for create different context! Ex: For a trip advice for a city! 
     max_tokens = 400,
+    #Roughly 75 words is about 100 tokens. A paragraph has 300 words on average. 
+    #So, 400 tokens is about the length of a normal paragraph. The model gpt-3.5-turbo-instruct has a token limit of 4,096.
     temperature = 0.3
+    #Temperature determines the randomness of a response. between 0-1
+    #A higher temperature will produce a more creative response, while a lower temperature will produce a more well-defined response.
   )
   retrieve_blog = response.choices[0].text
   return retrieve_blog
