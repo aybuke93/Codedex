@@ -2,7 +2,7 @@ async function fetchWeather() {
     let searchInput = document.getElementById("search").value;
     const weatherDataSection = document.getElementById("weather-data");
     weatherDataSection.style.display = "block"; //changes the hidden view to shown view.
-    const apiKey = "9f0347cd53544d35827eee5bd1de732c"; 
+    const apiKey = "KEY"; 
 
     if (searchInput == "") { //validation for Empty input.
         weatherDataSection.innerHTML = `
